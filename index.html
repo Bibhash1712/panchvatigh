@@ -1,48 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panchvati Guest House</title>
-  <meta name="description" content="Comfortable and affordable stay at Panchvati Guest House." />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin:0; padding:0;
+      background:#f5f5f5;
+      color:#333;
+    }
+    .hero {
+      position:relative;
+      height:60vh;
+      min-height:300px;
+      overflow:hidden;
+    }
+    .hero img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .hero-overlay {
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:20px;
+      background:linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+      color:#fff;
+      text-align:center;
+    }
+    header {
+      background: rgba(0,0,0,0.7);
+      color:#fff; padding:15px; text-align:center;
+    }
+    nav {
+      background: rgba(85,85,85,0.8);
+      padding:10px; text-align:center;
+    }
+    nav a {
+      color:#fff; margin:0 10px; text-decoration:none; font-size:14px;
+    }
+    section { padding:20px; background:rgba(255,255,255,0.85); margin:10px; border-radius:8px; }
+    h2 { margin-bottom:15px; }
+
+    /* Partners */
+    .partners-list {
+      display:flex;
+      flex-wrap:wrap;
+      gap:30px;
+      justify-content:center;
+      align-items:center;
+    }
+    .partner {
+      text-align:center;
+    }
+    .partner a img {
+      height:50px;
+      display:block;
+    }
+
+    /* Banquet */
+    .banquet { text-align:center; }
+    .banquet img { width:80%; max-width:600px; border-radius:8px; }
+
+    /* Rooms */
+    .rooms { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .room { border:1px solid #ccc; padding:10px; flex:1 1 250px; max-width:300px; background:#fff; border-radius:5px; }
+    .room img { width:100%; height:auto; border-radius:5px; }
+
+    /* Social videos */
+    .social-embeds { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .social-embeds iframe { flex:1 1 300px; max-width:100%; }
+
+    footer {
+      background: rgba(0,0,0,0.7);
+      color:#fff; text-align:center; padding:15px; font-size:14px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width:768px) {
+      nav a { display:block; margin:8px 0; }
+      .partners-map { flex-direction:column; align-items:center; }
+      .rooms, .social-embeds { flex-direction:column; align-items:center; }
+      .room { max-width:90%; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Panchvati Guest House</h1>
-  <p>Your Comfortable Stay</p>
-</header>
+<!-- Hero with starting image and header text at bottom -->
+<div class="hero">
+  <img src="assets/pgh_background.png" alt="Panchvati Guest House exterior">
+  <div class="hero-overlay">
+    <h1>Panchvati Guest House</h1>
+    <p>📞 +91-8100944700 | ✉️ support@panchvatiguesthouse.in</p>
+  </div>
+</div>
 
+<!-- Navigation -->
 <nav>
-  <a href="#about">About</a>
+  <a href="#partners-map">Partners</a>
+  <a href="#partners-map">Map</a>
+  <a href="#banquet">Banquet</a>
   <a href="#rooms">Rooms</a>
-  <a href="#contact">Contact</a>
+  <a href="#social">Videos</a>
 </nav>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>Welcome to Panchvati Guest House. We offer clean rooms, great service, and a peaceful stay.</p>
+<!-- Partners -->
+<section id="partners">
+  <h2>Our Booking Partners</h2>
+  <div class="partners-list">
+    <div class="partner">
+      <a href="https://www.makemytrip.com/hotels/" target="_blank">
+        <img src="assets/mmt-logo.png" alt="Book on MakeMyTrip">
+      </a>
+    </div>
+    <div class="partner">
+      <a href="https://www.goibibo.com/hotels/" target="_blank">
+        <img src="assets/goibibo-logo.png" alt="Book on Goibibo">
+      </a>
+    </div>
+  </div>
 </section>
+<section id="map">
+  <h2>Find Us</h2>
+  <iframe
+    src="https://www.google.com/maps?q=23.5570783,87.2750601&z=17&output=embed"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</section>
+<!--<section id="partners-map">-->
+<!--  <h2>Our Booking Partners</h2>-->
+<!--  <div class="partners-map">-->
+<!--    &lt;!&ndash; Partners &ndash;&gt;-->
+<!--    <div class="partners">-->
+<!--      <h3>Partners</h3>-->
+<!--      <div class="partner">-->
+<!--        <img src="assets/mmt-logo.png" alt="MakeMyTrip">-->
+<!--        <br>-->
+<!--        <a href="https://www.makemytrip.com/hotels/" target="_blank"-->
+<!--           style="display:inline-block; margin-top:10px; padding:8px 15px; background:#0073e6; color:#fff; text-decoration:none; border-radius:5px;">-->
+<!--          Book on MMT-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      <div class="partner">-->
+<!--        <img src="assets/goibibo-logo.png" alt="Goibibo">-->
+<!--        <br>-->
+<!--        <a href="https://www.goibibo.com/hotels/" target="_blank"-->
+<!--           style="display:inline-block; margin-top:10px; padding:8px 15px; background:#28a745; color:#fff; text-decoration:none; border-radius:5px;">-->
+<!--          Book on Goibibo-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
 
+<!--    &lt;!&ndash; Map &ndash;&gt;-->
+<!--    <div class="map">-->
+<!--      <h3>Find Us</h3>-->
+<!--      <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE"-->
+<!--              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<!-- Banquet -->
+<section id="banquet"> <h2>Banquet Hall</h2> <img src="assets/banquet.jpg" alt="Banquet Hall" style="width:80%; max-width:600px; border-radius:8px;"> <p>Perfect for weddings, conferences, and special events.</p> </section>
+
+<!-- Rooms -->
 <section id="rooms">
   <h2>Our Rooms</h2>
-  <div class="room">
-    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Room">
-    <p>Deluxe Room – AC, WiFi, TV</p>
+  <div class="rooms">
+    <div class="room">
+      <img src="assets/Borgos-Pieper_Hotel-Barcelona_Web.jpg" alt="Deluxe Room">
+      <h3>Deluxe Room</h3>
+      <p>Modern decor, king bed, warm lighting.</p>
+    </div>
+    <div class="room">
+      <img src="assets/Borgos-Pieper_Hotel-Barcelona_Web.jpg" alt="Standard Room">
+      <h3>Standard Room</h3>
+      <p>Simple decor, queen bed, cozy atmosphere.</p>
+    </div>
+    <div class="room">
+      <img src="assets/Borgos-Pieper_Hotel-Barcelona_Web.jpg" alt="Single Room">
+      <h3>Single Room</h3>
+      <p>Compact design, single bed, functional furniture.</p>
+    </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>📞 +91-8100944700</p>
-  <p> support@panchvatiguesthouse.in </p>
-  <p><a class="btn" href="https://www.google.com/maps/place/PANCHVATI+GUEST+HOUSE/@23.5570783,87.2724852,873m/data=!3m1!1e3!4m8!3m7!1s0x39f76dd4e73d3a65:0x17bd40d60e52472e!8m2!3d23.5570783!4d87.2750601!9m1!1b1!16s%2Fg%2F11yylf8vtr?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍Location Here</a></p>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Book on WhatsApp</a>
+
+<!-- Marketing Videos -->
+<section id="social">
+  <h2>Marketing Videos</h2>
+  <div class="social-embeds">
+    <iframe width="300" height="260" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/61558052475297/videos/1402809821043953/&width=300"
+            width="300" height="260" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen></iframe>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  <p>© 2026 Panchvati Guest House</p>
+  <p>&copy; 2026 Hotel Paradise. All rights reserved.</p>
 </footer>
 
 </body>
